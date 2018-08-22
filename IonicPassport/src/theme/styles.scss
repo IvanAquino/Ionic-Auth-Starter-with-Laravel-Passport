@@ -1,0 +1,23 @@
+[box-shadow] {
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+    border-radius: 10px !important;
+}
+.shadow {
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+.form {
+    padding-top: 20px; 
+
+    .item-md, .item-ios {
+        padding-left: 0 !important;
+    }
+    .item-inner {
+        border: 1px solid #e4e4e4 !important;
+        border-radius: 3px !important;
+        padding-left: 16px;
+        margin-bottom: 5px;
+    }
+}

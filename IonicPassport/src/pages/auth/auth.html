@@ -1,0 +1,63 @@
+<ion-header>
+
+  <ion-navbar color="inverse">
+    <ion-title>Auth</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  
+  <ion-card box-shadow>
+    <ion-card-content>
+
+      <ion-segment [(ngModel)]="segment" color="inverse">
+        <ion-segment-button value="login">
+          Login
+        </ion-segment-button>
+        <ion-segment-button value="register">
+          Register
+        </ion-segment-button>
+      </ion-segment>
+      
+      <div [ngSwitch]="segment">
+
+        <div *ngSwitchCase="'login'" class="form">
+          <ion-item>
+            <ion-input type="email" placeholder="Email" [(ngModel)]="formLogin.email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="Password" [(ngModel)]="formLogin.password"></ion-input>
+          </ion-item>
+
+          <button ion-button block box-shadow (click)="doLogin(formLogin)">
+            Login
+          </button>
+        </div>
+
+        <div *ngSwitchCase="'register'" class="form">
+          <ion-item>
+            <ion-input type="string" placeholder="Name" [(ngModel)]="formRegister.name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="email" placeholder="Email" [(ngModel)]="formRegister.email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="Password" [(ngModel)]="formRegister.password"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="Confirm password" [(ngModel)]="formRegister.password_confirmation"></ion-input>
+          </ion-item>
+
+          <button ion-button block box-shadow color="inverse" (click)="doRegister()">
+            Register
+          </button>
+        </div>
+
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

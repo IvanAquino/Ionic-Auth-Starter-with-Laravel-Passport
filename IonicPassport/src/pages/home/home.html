@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="inverse">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card box-shadow>
+    <ion-card-content text-center>
+
+      <ion-spinner *ngIf="loading"></ion-spinner>
+
+      <div *ngIf="!!user">
+        <h2>Name: {{ user.name }}</h2>
+        <p>
+          User id: {{ user.id }} <br>
+          User email: {{ user.email }}
+        </p>
+      </div>
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>
